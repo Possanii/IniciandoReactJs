@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import {Helmet} from "react-helmet";
 import Banner from './components/Banner';
 import Form from './components/Form';
 import Rodape from './components/Rodape';
 import Time from './components/Time';
+import Title from './components/Title';
 
 function App() {
 
@@ -54,11 +54,7 @@ function App() {
     
   return (
     <div className="App">
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title>Gustavo Piovesan</title>
-        <link rel="canonical" href="http://mysite.com/example" />
-      </Helmet>
+      <Title />
       <Banner />
       <Form times={times.map(time => time.timeName)} aoColaboradorCadastrado={colaborador => aoNovoColaboradorAdicionado(colaborador)}/>
       {times.map(time => <Time 
